@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:store_api/provider/cart_provider.dart';
+import 'package:store_api/utils/dialogbox.dart';
 import 'package:store_api/widgets/cart_list_tile.dart';
-import 'package:store_api/widgets/dialogbox.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
