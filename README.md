@@ -1,16 +1,15 @@
-# store_api
+# Ecommerce-RestAPI-Provider-Flutter
 
-A new Flutter project.
 
-## Getting Started
+Project Overview
+This Flutter project simulates an e-commerce application using a fake API and leverages the Provider package for state management. It includes features such as a shopping cart, favorites, calculations, and supports both light and dark themes.
 
-This project is a starting point for a Flutter application.
+Features
+API Integration: Fetches and displays data from a fake API.
+State Management: Utilizes the Provider package to manage application state efficiently.
+Favorites: Allows users to mark and view favorite items.
+Shopping Cart: Enables users to add, remove, and view items in their cart.
+Calculations: Computes item totals and prices calculations.
+Theme Support: Provides both light and dark theme options for a customizable user experience.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
