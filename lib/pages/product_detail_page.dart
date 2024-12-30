@@ -54,13 +54,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             Center(
               child: SizedBox(
                 height: 420,
-              child: ClipRRect(
+                child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                child: Image.network(
+                  child: Image.network(
                   height: 350,
                   width: double.infinity,
-                  widget.product.image,
-                  filterQuality: FilterQuality.high,
+                    widget.product.image,
+                    filterQuality: FilterQuality.high,
                   fit: BoxFit.fill,
                 ),
               ),
