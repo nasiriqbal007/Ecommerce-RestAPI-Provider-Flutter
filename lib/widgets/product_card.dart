@@ -29,20 +29,13 @@ class ProductCard extends StatelessWidget {
           children: [
             Center(
               child: Padding(
-                padding: const EdgeInsets.all(08.0),
-                child: Container(
-                  color: Theme.of(context).colorScheme.secondary,
-                  height: 190,
-                  width: 190,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      product.image,
-                      filterQuality: FilterQuality.high,
-                      fit: BoxFit.fill,
-                      height: 150,
-                      width: 150,
-                    ),
+                padding: const EdgeInsets.all(12.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    product.image,
+                    fit: BoxFit.contain,
+                    filterQuality: FilterQuality.high,
                   ),
                 ),
               ),
