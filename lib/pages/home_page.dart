@@ -8,6 +8,7 @@ import 'package:store_api/provider/product_provider.dart';
 import 'package:store_api/widgets/my_drawer.dart';
 import 'package:store_api/widgets/product_card.dart';
 import 'package:store_api/widgets/search_sort.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -70,30 +71,27 @@ class _HomePageState extends State<HomePage> {
         ),
         drawer: MyDrawer());
   }
+}
 
-  Widget _handleProductFetch(ProductProvider productProvider) {
-    if (productProvider.isLoading) {
-      return Center(child: CircularProgressIndicator());
-    } else if (productProvider.errorMessage != null) {
-      return Center(child: Text('Error: ${productProvider.errorMessage}'));
-    } else if (productProvider.products.isEmpty) {
-      return Center(child: Text('No products found'));
-    } else {
-      return GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 8,
-          mainAxisSpacing: 8,
-          childAspectRatio: 0.57,
-        ),
-        shrinkWrap: true,
-        physics: const ScrollPhysics(),
-        itemCount: productProvider.products.length,
-        itemBuilder: (context, index) {
-          final product = productProvider.products[index];
-          return ProductCard(product: product);
-        },
-      );
-    }
+Widget _handleProductFetch(ProductProvider productProvider) {
+  if (productProvider.isLoading) {
+    return Center(child: CircularProgressIndicator());
+  } else if (productProvider.errorMessage != null) {
+    return Center(child: Text('Error: ${productProvider.errorMessage}'));
+  } else if (productProvider.products.isEmpty) {
+    return Center(child: Text('No products found'));
+  } else {
+    return MasonryGridView.count(
+      crossAxisCount: 2,
+      mainAxisSpacing: 12,
+      crossAxisSpacing: 12,
+      shrinkWrap: true,
+      physics: const ScrollPhysics(),
+      itemCount: productProvider.products.length,
+      itemBuilder: (context, index) {
+        final product = productProvider.products[index];
+        return ProductCard(product: product);
+      },
+    );
   }
 }

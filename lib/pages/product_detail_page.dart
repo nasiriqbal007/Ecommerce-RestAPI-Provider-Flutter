@@ -51,11 +51,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 350,
-              width: double.infinity,
+            Center(
+              child: SizedBox(
+                height: 420,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(12),
                 child: Image.network(
                   height: 350,
                   width: double.infinity,
