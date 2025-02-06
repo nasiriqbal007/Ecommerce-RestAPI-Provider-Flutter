@@ -11,18 +11,18 @@ Dark Theme:
 
 Key Features:
 
-✓ State Management: Manage Cart, Favorites, and Theme with Provider
-✓ API Integration: Fetch products from a remote API, ensuring real-time data updates
-✓ Cart Functionality: Add, remove, and update product quantities
-✓ Favorite Products: Mark and view your favorite items
-✓ Theme Switching: Toggle between light and dark modes
-✓ Responsive UI: Custom widgets for smooth navigation
-✓ Price Calculations: Automatic total calculation of items in the cart
+- State Management: Manage Cart, Favorites, and Theme with Provider
+- API Integration: Fetch products from a remote API, ensuring real-time data updates
+- Cart Functionality: Add, remove, and update product quantities
+- Favorite Products: Mark and view your favorite items
+- Theme Switching: Toggle between light and dark modes
+- Responsive UI: Custom widgets for smooth navigation
+- Price Calculations: Automatic total calculation of items in the cart
 
 Tech Stack:
 
-Flutter: Building the UI
-API: Fetching data from a remote source
-Provider: For state management
+- Flutter: Building the UI
+- API: Fetching data from a remote source
+- Provider: For state management
 
 
